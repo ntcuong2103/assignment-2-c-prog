@@ -17,6 +17,8 @@ int test_case_1() {
     assert(strcmp(output, "200 -> 300 -> 524 -> ") == 0);
     display_memory_status(&memory, output);
     assert(strcmp(output, "No -> No -> Yes -> ") == 0);
+
+    assert(check_link(&memory) == 1);
     return 0;
 }
 
@@ -37,6 +39,7 @@ int test_case_2() {
     assert(strcmp(output, "200 -> 300 -> 524 -> ") == 0);
     display_memory_status(&memory, output);
     assert(strcmp(output, "No -> No -> Yes -> ") == 0);
+    assert(check_link(&memory) == 1);
     return 0;
 }
 
@@ -59,6 +62,7 @@ int test_case_3() {
     assert(strcmp(output, "200 -> 300 -> 524 -> ") == 0);
     display_memory_status(&memory, output);
     assert(strcmp(output, "No -> No -> Yes -> ") == 0);
+    assert(check_link(&memory) == 1);
     return 0;
 }
 

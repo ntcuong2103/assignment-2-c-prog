@@ -23,3 +23,4 @@ void free_memory(Memory *memory, void *ptr);
 void display_memory_sizes(Memory *memory, char* output);
 void display_memory_status(Memory *memory, char* output);
 void display_memory(Memory *memory);
+int check_link(Memory *memory);

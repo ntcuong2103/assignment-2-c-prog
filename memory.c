@@ -62,3 +62,17 @@ void display_memory_status(Memory *memory, char* output) {
     printf("%s\n", output);
 #endif
 }
+
+// Check all the link of the blocks, return 1 if all the links are correct, 0 otherwise
+int check_link(Memory *memory) {
+    Block *current = memory->head;
+    while (current != NULL) {
+        if (current->next) {
+            if (current->next->prev != current) {
+                return 0;
+            }
+        }
+        current = current->next;
+    }
+    return 1;
+}
